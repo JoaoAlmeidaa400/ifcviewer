@@ -33,17 +33,6 @@
             height: calc(100vh - 60px);
         }
     </style>
-
-    <!-- Import Map para resolver módulos -->
-    <script type="importmap">
-        {
-            "imports": {
-                "three": "https://unpkg.com/three@latest/build/three.module.js",
-                "three/examples/jsm/controls/OrbitControls.js": "https://unpkg.com/three@latest/examples/jsm/controls/OrbitControls.js",
-                "web-ifc-three": "https://unpkg.com/web-ifc-three@latest/IFCLoader.js"
-            }
-        }
-    </script>
 </head>
 <body>
     <div class="navbar">
@@ -53,9 +42,9 @@
     <div id="viewer-container"></div>
 
     <script type="module">
-        import * as THREE from 'three';
-        import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-        import { IFCLoader } from 'web-ifc-three';
+        import * as THREE from 'https://unpkg.com/three@latest/build/three.module.js';
+        import { OrbitControls } from 'https://unpkg.com/three@latest/examples/jsm/controls/OrbitControls.js';
+        import { IFCLoader } from 'https://unpkg.com/web-ifc-three@latest/IFCLoader.js';
 
         const scene = new THREE.Scene();
         scene.background = new THREE.Color(0x000000);
